@@ -1,5 +1,5 @@
 'use client';
-
+import {ChevronDown} from 'lucide-react';
 import { useState } from 'react';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
     },
     {
       question: "What is the 'Weekly Quota'",
-      answer: "It is simply a visual indicator indicate that keeps track of how many full days (out of the minimum 3 days) you have been to the office for the current work week."
+      answer: "It is simply a visual indicator that keeps track of how many full days (out of the minimum 3 days) you have been to the office for the current work week."
     },
     {
       question: "Will my streak break if I do not come to the office on my selected day but attend on a different day?",
@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       question: "What happens if I forget to clock in using the logger? Is my day lost?",
-      answer: "If you do not clock in with the logger, your data source is solely reliant on he access control but in case the access control is offline, your data for that day might be inaccurate. So we encourage everyone to use the logger once"
+      answer: "If you do not clock in with the logger, your data source is solely reliant on the access control but in case the access control is offline, your data for that day might be inaccurate. So we encourage everyone to use the logger once"
     }
   ];
 
@@ -58,7 +58,7 @@ export default function Home() {
         {/* FAQ Title */}
         <div className="relative z-10 text-center">
           <h1 className="text-5xl font-bold text-black mb-2">FAQ</h1>
-          <p className="text-xl italic text-black">Frequently Asked Questions</p>
+          <p className="text-xl light-italic text-black">Frequently Asked Questions</p>
         </div>
       </div>
 
@@ -72,9 +72,7 @@ export default function Home() {
                 className="w-full bg-white p-4 text-left flex justify-between items-center hover:shadow-md transition-shadow"
               >
                 <span className="font-medium text-sm pr-4">{faq.question}</span>
-                <img
-                  src="/arrow down.png"
-                  alt="toggle"
+                <ChevronDown
                   className="w-5 h-5 flex-shrink-0 transition-transform duration-300"
                   style={{
                     transform: openIndices.includes(index) ? 'rotate(-180deg)' : 'rotate(0deg)'
@@ -84,7 +82,7 @@ export default function Home() {
 
               {openIndices.includes(index) && (
                 <div className="bg-white p-4">
-                  <p className="text-sm">{faq.answer}</p>
+                  <p className="text-xs text-gray-600">{faq.answer}</p>
                 </div>
               )}
             </div>
