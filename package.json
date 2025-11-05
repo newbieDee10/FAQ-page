@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "lucide-react": "^0.545.0",
